@@ -1,56 +1,28 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{airline}-{###}",
- "creation": "2024-10-10 04:18:25.436801",
- "default_view": "List",
+ "autoname": "prompt",
+ "creation": "2024-11-03 01:29:38.030064",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "model",
-  "airline",
-  "capacity",
-  "initial_audit_completed"
+  "description"
  ],
  "fields": [
   {
-   "fieldname": "model",
+   "description": "about the add-on",
+   "fieldname": "description",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Model ",
-   "reqd": 1
-  },
-  {
-   "fieldname": "airline",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Airline",
-   "options": "Airline",
-   "reqd": 1
-  },
-  {
-   "fieldname": "capacity",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Capacity",
-   "non_negative": 1,
-   "reqd": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "initial_audit_completed",
-   "fieldtype": "Check",
-   "label": "Initial Audit Completed"
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-05 03:46:02.537085",
+ "modified": "2024-11-05 03:36:51.288366",
  "modified_by": "Administrator",
  "module": "airplane_mode",
- "name": "Airplane",
- "naming_rule": "Expression",
+ "name": "Airplane Ticket Add-on Type",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {
@@ -90,13 +62,15 @@
    "write": 1
   },
   {
+   "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Flight Crew Member",
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
    "email": 1,

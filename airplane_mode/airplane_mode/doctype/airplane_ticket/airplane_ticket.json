@@ -20,10 +20,14 @@
   "section_break_w9vfg",
   "departure_date",
   "departure_time",
+  "add_ons",
+  "flight_price",
+  "total_amount",
   "column_break_yzxx0",
   "duration_of_flight",
   "amended_from",
-  "status"
+  "status",
+  "seat"
  ],
  "fields": [
   {
@@ -43,17 +47,17 @@
    "read_only": 1
   },
   {
+   "fetch_from": "flight.source_airport",
    "fieldname": "source_airport",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Source Airport ",
-   "options": "Airport",
    "reqd": 1
   },
   {
+   "fetch_from": "flight.destination_airport",
    "fieldname": "destination_airport",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Destination Airport",
-   "options": "Airport",
    "reqd": 1
   },
   {
@@ -61,7 +65,7 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "source_airport.code",
+   "fetch_from": "flight.source_airport_code",
    "fieldname": "source_airport_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -69,7 +73,7 @@
    "reqd": 1
   },
   {
-   "fetch_from": "destination_airport.code",
+   "fetch_from": "flight.destination_airport_code",
    "fieldname": "destination_airport_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -80,10 +84,11 @@
    "fieldname": "flight",
    "fieldtype": "Link",
    "label": "Flight",
-   "options": "Airplane",
+   "options": "Airplane Flight",
    "reqd": 1
   },
   {
+   "fetch_from": "flight.date_of_departure",
    "fieldname": "departure_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -91,12 +96,13 @@
    "reqd": 1
   },
   {
+   "fetch_from": "flight.time_of_departure",
    "fieldname": "departure_time",
    "fieldtype": "Time",
-   "label": "Departure Time",
-   "reqd": 1
+   "label": "Departure Time"
   },
   {
+   "fetch_from": "flight.duration",
    "fieldname": "duration_of_flight",
    "fieldtype": "Duration",
    "label": "Duration of Flight",
@@ -125,12 +131,34 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Booked\nChecked-In\nBoarded"
+  },
+  {
+   "fieldname": "add_ons",
+   "fieldtype": "Table",
+   "label": "add_ons",
+   "options": "Airplane Ticket Add-on Item"
+  },
+  {
+   "fieldname": "flight_price",
+   "fieldtype": "Currency",
+   "label": "Flight Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "seat",
+   "fieldtype": "Data",
+   "label": "Seat"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-10-15 19:32:59.582043",
+ "modified": "2024-11-05 18:03:21.942721",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
@@ -146,6 +174,41 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flight Crew Member",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
    "share": 1,
    "write": 1
   }

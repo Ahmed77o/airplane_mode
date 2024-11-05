@@ -2,7 +2,16 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Airplane Ticket', {
-	// refresh: function(frm) {
-
-	// }
+	refresh(frm) {
+		frm.add_custom_button(
+		  "Book Seat",
+		  () => {
+			frappe.prompt("Seat Number", ({ value }) => {
+			  frm.set_value("seat", value);
+			  frm.save();
+			});
+		  },
+		  "Actions"
+		);
+	  },
 });
