@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-06 00:35:02.224750",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_name",
+  "shop_number",
+  "shop_rent",
+  "airport",
+  "column_break_nhuy",
+  "tenant_name",
+  "tenant_phone_number",
+  "tenant_email",
+  "section_break_sxoj",
+  "date_of_contract_start",
+  "column_break_mund",
+  "date_of_contract_expiry",
+  "section_break_lqzv",
+  "contract_terms"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Link",
+   "label": "Shop Number",
+   "options": "Shop"
+  },
+  {
+   "fetch_from": "shop_number.shop_rent",
+   "fieldname": "shop_rent",
+   "fieldtype": "Int",
+   "label": "Shop Rent"
+  },
+  {
+   "fetch_from": "shop_number.shop_name",
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "label": "Shop Name"
+  },
+  {
+   "fetch_from": "shop_number.airport",
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport"
+  },
+  {
+   "fieldname": "column_break_nhuy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Link",
+   "label": "Tenant Name",
+   "options": "Tenant"
+  },
+  {
+   "fetch_from": "tenant_name.tenant_phone_number",
+   "fieldname": "tenant_phone_number",
+   "fieldtype": "Date",
+   "label": "Tenant Phone Number"
+  },
+  {
+   "fetch_from": "tenant_name.tenant_email",
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "label": "Tenant Email"
+  },
+  {
+   "fieldname": "section_break_sxoj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_contract_expiry",
+   "fieldtype": "Date",
+   "label": "Date of Contract Expiry"
+  },
+  {
+   "fieldname": "date_of_contract_start",
+   "fieldtype": "Date",
+   "label": "Date of Contract Start"
+  },
+  {
+   "fieldname": "column_break_mund",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lqzv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "contract_terms",
+   "fieldtype": "Text Editor",
+   "label": "Contract Terms"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-06 17:42:37.500767",
+ "modified_by": "Administrator",
+ "module": "Airport Shop MS",
+ "name": "Lease Contract",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

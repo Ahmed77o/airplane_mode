@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:request_title",
+ "creation": "2024-11-06 20:30:00.364652",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hlmb",
+  "request_title",
+  "request__date",
+  "column_break_jyvg",
+  "request__status",
+  "contract_start_date",
+  "contract_expiry_date",
+  "amended_from",
+  "section_break_ubzh",
+  "tenant",
+  "column_break_tuxv",
+  "shop"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hlmb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rental Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "request_title",
+   "fieldtype": "Data",
+   "label": "Request Title",
+   "unique": 1
+  },
+  {
+   "fieldname": "request__date",
+   "fieldtype": "Date",
+   "label": "Request  Date"
+  },
+  {
+   "fieldname": "column_break_jyvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request__status",
+   "fieldtype": "Select",
+   "label": "Request  Status"
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
+  },
+  {
+   "fieldname": "contract_expiry_date",
+   "fieldtype": "Data",
+   "label": "Contract Expiry Date"
+  },
+  {
+   "fieldname": "section_break_ubzh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant"
+  },
+  {
+   "fieldname": "column_break_tuxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "label": "Shop",
+   "options": "Shop"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-06 20:35:58.537549",
+ "modified_by": "Administrator",
+ "module": "Airport Shop MS",
+ "name": "Rental Request",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

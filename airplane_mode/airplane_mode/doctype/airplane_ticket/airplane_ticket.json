@@ -9,25 +9,27 @@
  "engine": "InnoDB",
  "field_order": [
   "passenger",
+  "status",
   "ticket_details_section_section",
   "flight",
+  "seat",
   "section_break_ruuvf",
-  "source_airport",
   "source_airport_code",
   "section_break_1qgvo",
-  "destination_airport",
   "destination_airport_code",
   "section_break_w9vfg",
+  "add_ons",
+  "section_break_haxf",
+  "flight_price",
+  "column_break_sprg",
+  "total_amount",
+  "section_break_xyjb",
   "departure_date",
   "departure_time",
-  "add_ons",
-  "flight_price",
-  "total_amount",
   "column_break_yzxx0",
   "duration_of_flight",
-  "amended_from",
-  "status",
-  "seat"
+  "gate_number",
+  "amended_from"
  ],
  "fields": [
   {
@@ -45,20 +47,6 @@
    "options": "Airplane Ticket",
    "print_hide": 1,
    "read_only": 1
-  },
-  {
-   "fetch_from": "flight.source_airport",
-   "fieldname": "source_airport",
-   "fieldtype": "Data",
-   "label": "Source Airport ",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "flight.destination_airport",
-   "fieldname": "destination_airport",
-   "fieldtype": "Data",
-   "label": "Destination Airport",
-   "reqd": 1
   },
   {
    "fieldname": "ticket_details_section_section",
@@ -135,7 +123,7 @@
   {
    "fieldname": "add_ons",
    "fieldtype": "Table",
-   "label": "add_ons",
+   "label": "Add_Ons",
    "options": "Airplane Ticket Add-on Item"
   },
   {
@@ -153,12 +141,31 @@
    "fieldname": "seat",
    "fieldtype": "Data",
    "label": "Seat"
+  },
+  {
+   "fieldname": "section_break_haxf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sprg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xyjb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "flight.gate_number",
+   "fieldname": "gate_number",
+   "fieldtype": "Int",
+   "label": "Gate Number",
+   "non_negative": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-05 18:03:21.942721",
+ "modified": "2024-11-06 00:08:35.014589",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
