@@ -1,38 +1,28 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2024-11-06 00:22:24.292332",
+ "autoname": "field:tenant_name",
+ "creation": "2024-11-12 01:15:36.016008",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "tenant_name",
-  "tenant_phone_number",
+  "phone",
   "column_break_cjvu",
   "tenant_group_name",
-  "tenant_email",
-  "accounts_tab",
-  "tenant_account"
+  "tenant_email"
  ],
  "fields": [
   {
    "fieldname": "tenant_name",
    "fieldtype": "Data",
-   "label": "Tenant Name"
-  },
-  {
-   "fieldname": "tenant_phone_number",
-   "fieldtype": "Phone",
-   "label": "Tenant Phone Number"
+   "label": "Tenant Name",
+   "unique": 1
   },
   {
    "fieldname": "column_break_cjvu",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "tenant_email",
-   "fieldtype": "Data",
-   "label": "Tenant Email",
-   "options": "Email"
   },
   {
    "fieldname": "tenant_group_name",
@@ -41,24 +31,25 @@
    "options": "Tenant Group"
   },
   {
-   "fieldname": "accounts_tab",
-   "fieldtype": "Tab Break",
-   "label": "Accounts"
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "label": "Tenant Email",
+   "options": "Email"
   },
   {
-   "fieldname": "tenant_account",
-   "fieldtype": "Link",
-   "label": "Tenant Account",
-   "link_filters": "[[\"Account\",\"account_type\",\"=\",\"Receivable Account\"]]",
-   "options": "Account"
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-06 21:41:52.740601",
+ "modified": "2024-11-12 01:35:48.417682",
  "modified_by": "Administrator",
- "module": "Airport Shop MS",
- "name": "Tenant",
+ "module": "Airport Shop",
+ "name": "Tenant Details",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -74,7 +65,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "tenant_name"
 }

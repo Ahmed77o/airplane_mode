@@ -78,12 +78,13 @@
   {
    "fieldname": "tab_2_tab",
    "fieldtype": "Tab Break",
-   "label": "Tab 2"
+   "label": "Accounts"
   },
   {
    "fieldname": "income_account",
    "fieldtype": "Link",
    "label": "Income Account",
+   "link_filters": "[[\"Account\",\"account_type\",\"=\",\"Income Account\"]]",
    "options": "Account"
   },
   {
@@ -94,12 +95,13 @@
    "fieldname": "expense_account",
    "fieldtype": "Link",
    "label": "Expense Account",
+   "link_filters": "[[\"Account\",\"account_type\",\"=\",\"Expense Account\"]]",
    "options": "Account"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-06 20:43:35.534708",
+ "modified": "2024-11-06 21:32:07.239310",
  "modified_by": "Administrator",
  "module": "Airport Shop MS",
  "name": "Shop",

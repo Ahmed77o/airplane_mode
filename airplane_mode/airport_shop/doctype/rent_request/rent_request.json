@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-11-12 01:24:41.032217",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hlmb",
+  "request_title",
+  "request__date",
+  "request__status",
+  "column_break_jyvg",
+  "contract_start_date",
+  "contract_expiry_date",
+  "section_break_ubzh",
+  "tenant",
+  "tenant_phone",
+  "tenant_email",
+  "amended_from",
+  "column_break_tuxv",
+  "shop_name",
+  "shop_number",
+  "shop_status",
+  "shop_area",
+  "shop_price",
+  "airport"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hlmb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "request_title",
+   "fieldtype": "Data",
+   "label": "Request Title",
+   "unique": 1
+  },
+  {
+   "fieldname": "request__date",
+   "fieldtype": "Date",
+   "label": "Request  Date"
+  },
+  {
+   "fieldname": "column_break_jyvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request__status",
+   "fieldtype": "Select",
+   "label": "Request  Status",
+   "options": "\nApproved\nCancelled"
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
+  },
+  {
+   "fieldname": "contract_expiry_date",
+   "fieldtype": "Date",
+   "label": "Contract Expiry Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_ubzh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant Details"
+  },
+  {
+   "fieldname": "column_break_tuxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Rent Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "tenant.phone",
+   "fieldname": "tenant_phone",
+   "fieldtype": "Data",
+   "label": "Tenant Phone"
+  },
+  {
+   "fetch_from": "tenant.tenant_email",
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "label": "Tenant Email"
+  },
+  {
+   "fetch_from": "shop_name.shop_number",
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "label": "Shop Number"
+  },
+  {
+   "fetch_from": "shop_name.shop_status",
+   "fieldname": "shop_status",
+   "fieldtype": "Data",
+   "label": "Shop Status"
+  },
+  {
+   "fetch_from": "shop_name.shop_area",
+   "fieldname": "shop_area",
+   "fieldtype": "Data",
+   "label": "Shop Area"
+  },
+  {
+   "fetch_from": "shop_name.default_price",
+   "fieldname": "shop_price",
+   "fieldtype": "Data",
+   "label": "Shop Price"
+  },
+  {
+   "fetch_from": "shop_name.airport",
+   "fieldname": "airport",
+   "fieldtype": "Data",
+   "label": "Airport"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Link",
+   "label": "Shop Name",
+   "options": "Shop Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-12 04:08:43.061421",
+ "modified_by": "Administrator",
+ "module": "Airport Shop",
+ "name": "Rent Request",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
